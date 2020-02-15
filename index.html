@@ -79,6 +79,14 @@
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
   <div class="site-meta">
 
     <div>
@@ -90,13 +98,7 @@
     </div>
   </div>
 
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
+  <div class="site-nav-right"></div>
 </div>
 
 
@@ -164,7 +166,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-02-15 11:41:30 / Modified: 11:59:43" itemprop="dateCreated datePublished" datetime="2020-02-15T11:41:30+08:00">2020-02-15</time>
+              <time title="Created: 2020-02-15 11:41:30 / Modified: 12:35:13" itemprop="dateCreated datePublished" datetime="2020-02-15T11:41:30+08:00">2020-02-15</time>
             </span>
 
           
@@ -181,7 +183,17 @@
           <h1 id="客户端安装与配置"><a href="#客户端安装与配置" class="headerlink" title="客户端安装与配置"></a>客户端安装与配置</h1><ol>
 <li>客户端安装(<a href="https://github.com/trojan-gfw/trojan" target="_blank" rel="noopener">trojan官方repo</a>)</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew tap trojan-gfw/homebrew-trojan  </span><br><span class="line">brew install trojan</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew tap trojan-gfw/homebrew-trojan  </span><br><span class="line">$ brew install trojan</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>参数配置  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ trojan --<span class="built_in">help</span></span><br></pre></td></tr></table></figure>
+修改默认的配置文件(例如我的是/usr/local/Cellar/trojan/1.14.1/etc/trojan/config.json)中的”remote_addr”,”password”字段。</li>
+<li>启动客户端<br>由于Trojan与SS等默认占用的端口都是1080，须先退出其他梯子。<br>默认启动方式<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ trojan -c [配置文件]</span><br></pre></td></tr></table></figure>
+后台服务启动（开机自启）<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew services start trojan</span><br></pre></td></tr></table></figure>
+检查端口占用情况<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ lsof -i:1080</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h1 id="SwitchyOmega配置"><a href="#SwitchyOmega配置" class="headerlink" title="SwitchyOmega配置"></a>SwitchyOmega配置</h1>
       
     </div>
 
