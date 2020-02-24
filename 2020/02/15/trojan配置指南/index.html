@@ -20,16 +20,16 @@
     var CONFIG = {"hostname":"code2hack.github.io","root":"/blog/","scheme":"Muse","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="客户端安装与配置 客户端安装(trojan官方repo)12$ brew tap trojan-gfw&#x2F;homebrew-trojan  $ brew install trojan 参数配置  1$ trojan --help 修改默认的配置文件(例如我的是&#x2F;usr&#x2F;local&#x2F;Cellar&#x2F;trojan&#x2F;1.14.1&#x2F;etc&#x2F;trojan&#x2F;config.json)中的”remote_addr”,">
+  <meta name="description" content="Macos(catalina)客户端安装与配置 客户端安装(trojan官方repo)12$ brew tap trojan-gfw&#x2F;homebrew-trojan  $ brew install trojan 参数配置  1$ trojan --help 修改默认的配置文件(例如我的是&#x2F;usr&#x2F;local&#x2F;Cellar&#x2F;trojan&#x2F;1.14.1&#x2F;etc&#x2F;trojan&#x2F;config.json)中">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Macos(catalina)下trojan配置指南">
+<meta property="og:title" content="Trojan配置指南">
 <meta property="og:url" content="https://code2hack.github.io/blog/2020/02/15/trojan%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="客户端安装与配置 客户端安装(trojan官方repo)12$ brew tap trojan-gfw&#x2F;homebrew-trojan  $ brew install trojan 参数配置  1$ trojan --help 修改默认的配置文件(例如我的是&#x2F;usr&#x2F;local&#x2F;Cellar&#x2F;trojan&#x2F;1.14.1&#x2F;etc&#x2F;trojan&#x2F;config.json)中的”remote_addr”,">
+<meta property="og:description" content="Macos(catalina)客户端安装与配置 客户端安装(trojan官方repo)12$ brew tap trojan-gfw&#x2F;homebrew-trojan  $ brew install trojan 参数配置  1$ trojan --help 修改默认的配置文件(例如我的是&#x2F;usr&#x2F;local&#x2F;Cellar&#x2F;trojan&#x2F;1.14.1&#x2F;etc&#x2F;trojan&#x2F;config.json)中">
 <meta property="og:locale" content="zh">
 <meta property="og:image" content="https://code2hack.github.io/blog/img/2020-02-15_1.png">
 <meta property="article:published_time" content="2020-02-15T03:41:30.000Z">
-<meta property="article:modified_time" content="2020-02-24T10:41:20.096Z">
+<meta property="article:modified_time" content="2020-02-24T10:42:33.542Z">
 <meta property="article:author" content="Code2Hack">
 <meta property="article:tag" content="vpn">
 <meta name="twitter:card" content="summary">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>Macos(catalina)下trojan配置指南 | Blog</title>
+  <title>Trojan配置指南 | Blog</title>
   
 
 
@@ -161,7 +161,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Macos(catalina)下trojan配置指南
+          Trojan配置指南
         </h1>
 
         <div class="post-meta">
@@ -178,7 +178,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-24 18:41:20" itemprop="dateModified" datetime="2020-02-24T18:41:20+08:00">2020-02-24</time>
+                <time title="Modified: 2020-02-24 18:42:33" itemprop="dateModified" datetime="2020-02-24T18:42:33+08:00">2020-02-24</time>
               </span>
 
           
@@ -192,7 +192,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="客户端安装与配置"><a href="#客户端安装与配置" class="headerlink" title="客户端安装与配置"></a>客户端安装与配置</h1><ol>
+        <h1 id="Macos-catalina"><a href="#Macos-catalina" class="headerlink" title="Macos(catalina)"></a>Macos(catalina)</h1><h2 id="客户端安装与配置"><a href="#客户端安装与配置" class="headerlink" title="客户端安装与配置"></a>客户端安装与配置</h2><ol>
 <li>客户端安装(<a href="https://github.com/trojan-gfw/trojan" target="_blank" rel="noopener">trojan官方repo</a>)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew tap trojan-gfw/homebrew-trojan  </span><br><span class="line">$ brew install trojan</span><br></pre></td></tr></table></figure></li>
 <li>参数配置  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ trojan --<span class="built_in">help</span></span><br></pre></td></tr></table></figure>
 修改默认的配置文件(例如我的是/usr/local/Cellar/trojan/1.14.1/etc/trojan/config.json)中的”remote_addr”,”password”字段。</li>
@@ -202,8 +202,8 @@
 
 </li>
 </ol>
-<h1 id="SwitchyOmega配置"><a href="#SwitchyOmega配置" class="headerlink" title="SwitchyOmega配置"></a>SwitchyOmega配置</h1><p><a href="/blog/files/OmegaOptions-1080.bak">SwitchyOmega文件下载</a><br><img src="/blog/img/2020-02-15_1.png" alt="omega"></p>
-<h1 id="Kitsunebi-for-android-configure-file"><a href="#Kitsunebi-for-android-configure-file" class="headerlink" title="Kitsunebi(for android) configure file"></a>Kitsunebi(for android) configure file</h1><p><a href="/blog/files/Kitsunebi.json">config.json</a></p>
+<h2 id="SwitchyOmega配置"><a href="#SwitchyOmega配置" class="headerlink" title="SwitchyOmega配置"></a>SwitchyOmega配置</h2><p><a href="/blog/files/OmegaOptions-1080.bak">SwitchyOmega文件下载</a><br><img src="/blog/img/2020-02-15_1.png" alt="omega"></p>
+<h1 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h1><h2 id="Kitsunebi-for-android-configure-file"><a href="#Kitsunebi-for-android-configure-file" class="headerlink" title="Kitsunebi(for android) configure file"></a>Kitsunebi(for android) configure file</h2><p><a href="/blog/files/Kitsunebi.json">config.json</a></p>
 
     </div>
 
@@ -278,7 +278,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#客户端安装与配置"><span class="nav-number">1.</span> <span class="nav-text">客户端安装与配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SwitchyOmega配置"><span class="nav-number">2.</span> <span class="nav-text">SwitchyOmega配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Kitsunebi-for-android-configure-file"><span class="nav-number">3.</span> <span class="nav-text">Kitsunebi(for android) configure file</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Macos-catalina"><span class="nav-number">1.</span> <span class="nav-text">Macos(catalina)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#客户端安装与配置"><span class="nav-number">1.1.</span> <span class="nav-text">客户端安装与配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SwitchyOmega配置"><span class="nav-number">1.2.</span> <span class="nav-text">SwitchyOmega配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android"><span class="nav-number">2.</span> <span class="nav-text">Android</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Kitsunebi-for-android-configure-file"><span class="nav-number">2.1.</span> <span class="nav-text">Kitsunebi(for android) configure file</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
