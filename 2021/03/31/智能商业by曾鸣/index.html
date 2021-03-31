@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"code2hack.github.io","root":"/blog/","scheme":"Muse","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="第一讲:联、互、网第二讲：数据智能案例1：双十一推荐算法 案例2：Google翻译 数据化:记录用户行为和数据。  算法化:根据数据，对用户行为进行抽象，从而优化决策   例:PageRank算法。  产品化:智能产品与用户间的桥梁   第三讲:智能商业双螺旋核心共性:  网络协同 数据智能Google 99%市值来自于广告 实时竞价 AdWorld:网站组–广告组    淘宝滴滴打车乘客--司机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="智能商业by曾鸣">
+<meta property="og:url" content="https://code2hack.github.io/blog/2021/03/31/%E6%99%BA%E8%83%BD%E5%95%86%E4%B8%9Aby%E6%9B%BE%E9%B8%A3/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="第一讲:联、互、网第二讲：数据智能案例1：双十一推荐算法 案例2：Google翻译 数据化:记录用户行为和数据。  算法化:根据数据，对用户行为进行抽象，从而优化决策   例:PageRank算法。  产品化:智能产品与用户间的桥梁   第三讲:智能商业双螺旋核心共性:  网络协同 数据智能Google 99%市值来自于广告 实时竞价 AdWorld:网站组–广告组    淘宝滴滴打车乘客--司机">
+<meta property="og:locale" content="zh">
+<meta property="article:published_time" content="2021-03-31T00:10:42.000Z">
+<meta property="article:modified_time" content="2021-03-31T01:36:32.672Z">
+<meta property="article:author" content="Code2Hack">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://code2hack.github.io/blog/2021/03/31/%E6%99%BA%E8%83%BD%E5%95%86%E4%B8%9Aby%E6%9B%BE%E9%B8%A3/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>智能商业by曾鸣 | Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-right"></div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh">
+    <link itemprop="mainEntityOfPage" href="https://code2hack.github.io/blog/2021/03/31/%E6%99%BA%E8%83%BD%E5%95%86%E4%B8%9Aby%E6%9B%BE%E9%B8%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Code2Hack">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          智能商业by曾鸣
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-03-31 08:10:42 / Modified: 09:36:32" itemprop="dateCreated datePublished" datetime="2021-03-31T08:10:42+08:00">2021-03-31</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="第一讲-联、互、网"><a href="#第一讲-联、互、网" class="headerlink" title="第一讲:联、互、网"></a>第一讲:联、互、网</h1><h1 id="第二讲：数据智能"><a href="#第二讲：数据智能" class="headerlink" title="第二讲：数据智能"></a>第二讲：数据智能</h1><pre><code>案例1：双十一推荐算法
+案例2：Google翻译</code></pre><ul>
+<li><p>数据化:记录用户行为和数据。</p>
+</li>
+<li><p>算法化:根据数据，对用户行为进行抽象，从而优化决策</p>
+<p>  例:PageRank算法。</p>
+</li>
+<li><p>产品化:智能产品与用户间的桥梁</p>
+</li>
+</ul>
+<h1 id="第三讲-智能商业双螺旋"><a href="#第三讲-智能商业双螺旋" class="headerlink" title="第三讲:智能商业双螺旋"></a>第三讲:智能商业双螺旋</h1><p><strong>核心共性:</strong></p>
+<ul>
+<li>网络协同</li>
+<li>数据智能<h2 id="Google"><a href="#Google" class="headerlink" title="Google"></a>Google</h2></li>
+<li>99%市值来自于广告<ul>
+<li>实时竞价</li>
+<li>AdWorld:<strong>网站组–广告组</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="淘宝"><a href="#淘宝" class="headerlink" title="淘宝"></a>淘宝</h2><h2 id="滴滴打车"><a href="#滴滴打车" class="headerlink" title="滴滴打车"></a>滴滴打车</h2><pre><code>乘客--司机</code></pre><h2 id="美团"><a href="#美团" class="headerlink" title="美团"></a>美团</h2><h2 id="Airbnb"><a href="#Airbnb" class="headerlink" title="Airbnb"></a>Airbnb</h2><h1 id="第四讲-智能商业"><a href="#第四讲-智能商业" class="headerlink" title="第四讲:智能商业"></a>第四讲:智能商业</h1><p><strong>精准</strong></p>
+<ul>
+<li>精准广告,事后付费</li>
+<li>精准医疗<h2 id="精确"><a href="#精确" class="headerlink" title="精确:"></a>精确:</h2>通过协同网络实现</li>
+</ul>
+<h2 id="准确"><a href="#准确" class="headerlink" title="准确"></a>准确</h2><ul>
+<li>数据智能实现：挖掘潜在需求,定制准确服务</li>
+<li>通过机器学习<strong>迭代&amp;逼近</strong></li>
+</ul>
+<h1 id="第五讲-网络协同-Uber案例分析-重点参考"><a href="#第五讲-网络协同-Uber案例分析-重点参考" class="headerlink" title="第五讲 网络协同:Uber案例分析(重点参考)"></a>第五讲 网络协同:Uber案例分析(重点参考)</h1><p>主要创新:</p>
+<ul>
+<li>闲置资源利用</li>
+<li>实时定价策略,高峰期加价</li>
+</ul>
+<p>主要挑战:依赖规模效应，网络效应不高 </p>
+<ul>
+<li>需求端网络效应太弱</li>
+<li>模仿者有生存空间,<strong>规模效应壁垒低</strong></li>
+<li>用户场景简单:打车。导致业务扩张乏力。对比淘宝</li>
+</ul>
+<h1 id="第六讲-创造力革命"><a href="#第六讲-创造力革命" class="headerlink" title="第六讲 创造力革命"></a>第六讲 创造力革命</h1><p>人的创造力vs机器智能</p>
+<ul>
+<li><p>第一次工业革命：技术革命，科技，直接提高生产力</p>
+</li>
+<li><p>第二次工业革命：管理革命，公司，提高生产效率</p>
+<p>  公司的效率取决于信息流通效率</p>
+</li>
+<li><p>第三次工业革命：知识革命，体系化流程化</p>
+<h2 id="第四次工业革命：创造力革命"><a href="#第四次工业革命：创造力革命" class="headerlink" title="第四次工业革命：创造力革命"></a>第四次工业革命：创造力革命</h2><p>案例：</p>
+</li>
+<li><p>Google小学教育软件体系，工程师-老师-学生</p>
+</li>
+<li><p>Google内部新IC:Individual Contributor </p>
+</li>
+<li><p>合伙人</p>
+</li>
+</ul>
+<h1 id="第七讲-新运营-用户第一-客户驱动-提高用户黏性"><a href="#第七讲-新运营-用户第一-客户驱动-提高用户黏性" class="headerlink" title="第七讲 新运营: 用户第一,客户驱动,提高用户黏性"></a>第七讲 新运营: 用户第一,客户驱动,提高用户黏性</h1><ul>
+<li>企业-用户<strong>持续</strong>互动,因为<strong>转移成本非常低</strong></li>
+<li>用户行为数据化</li>
+<li>产品快速迭代，算法自动学习</li>
+</ul>
+<h1 id="第八讲-新定位：点线面体"><a href="#第八讲-新定位：点线面体" class="headerlink" title="第八讲 新定位：点线面体"></a>第八讲 新定位：点线面体</h1><ul>
+<li>点:用户，玩家<ul>
+<li>壁垒低，机会最重要。案例：网红经济</li>
+</ul>
+</li>
+<li>线:淘宝卖家<ul>
+<li>充分利用点与面提供不同服务</li>
+</ul>
+</li>
+<li>面:平台,协同网络</li>
+</ul>
+<p>面的发展衍生其他面:淘宝衍生出支付宝</p>
+<p>点的特征：经典案例：网红经济</p>
+<h1 id="第九讲-新模式：S2B"><a href="#第九讲-新模式：S2B" class="headerlink" title="第九讲 新模式：S2B"></a>第九讲 新模式：S2B</h1><p>Supply 2 Business</p>
+<ul>
+<li><p>Business自带流量</p>
+</li>
+<li><p>案例：网红，服装批发。线下新机会</p>
+</li>
+</ul>
+<p>C2M: Customer 2 Manufacturer<br>C2B: Customer 2 Business</p>
+<h1 id="第十讲-新品牌：网红运作"><a href="#第十讲-新品牌：网红运作" class="headerlink" title="第十讲 新品牌：网红运作"></a>第十讲 新品牌：网红运作</h1><p>客户驱动：网红-粉丝先互动，后形成品牌，提供广告空间，销售时机。具有高度<strong>持续性</strong></p>
+<p>传统品牌：先产生品牌，通过广告<strong>单次单方面</strong>传播和吸引客户。广告转化率低</p>
+<p>启发：<strong>知识网红</strong></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/2021/03/28/%E5%B0%8F%E5%B2%9B%E5%88%9B%E4%B8%9A%E6%96%B9%E6%A1%88/" rel="prev" title="小岛创业方案">
+      <i class="fa fa-chevron-left"></i> 小岛创业方案
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一讲-联、互、网"><span class="nav-number">1.</span> <span class="nav-text">第一讲:联、互、网</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二讲：数据智能"><span class="nav-number">2.</span> <span class="nav-text">第二讲：数据智能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三讲-智能商业双螺旋"><span class="nav-number">3.</span> <span class="nav-text">第三讲:智能商业双螺旋</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Google"><span class="nav-number">3.1.</span> <span class="nav-text">Google</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#淘宝"><span class="nav-number">3.2.</span> <span class="nav-text">淘宝</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#滴滴打车"><span class="nav-number">3.3.</span> <span class="nav-text">滴滴打车</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美团"><span class="nav-number">3.4.</span> <span class="nav-text">美团</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Airbnb"><span class="nav-number">3.5.</span> <span class="nav-text">Airbnb</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四讲-智能商业"><span class="nav-number">4.</span> <span class="nav-text">第四讲:智能商业</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#精确"><span class="nav-number">4.1.</span> <span class="nav-text">精确:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准确"><span class="nav-number">4.2.</span> <span class="nav-text">准确</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第五讲-网络协同-Uber案例分析-重点参考"><span class="nav-number">5.</span> <span class="nav-text">第五讲 网络协同:Uber案例分析(重点参考)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第六讲-创造力革命"><span class="nav-number">6.</span> <span class="nav-text">第六讲 创造力革命</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第四次工业革命：创造力革命"><span class="nav-number">6.1.</span> <span class="nav-text">第四次工业革命：创造力革命</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第七讲-新运营-用户第一-客户驱动-提高用户黏性"><span class="nav-number">7.</span> <span class="nav-text">第七讲 新运营: 用户第一,客户驱动,提高用户黏性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第八讲-新定位：点线面体"><span class="nav-number">8.</span> <span class="nav-text">第八讲 新定位：点线面体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第九讲-新模式：S2B"><span class="nav-number">9.</span> <span class="nav-text">第九讲 新模式：S2B</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第十讲-新品牌：网红运作"><span class="nav-number">10.</span> <span class="nav-text">第十讲 新品牌：网红运作</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Code2Hack</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Code2Hack</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.1
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/muse.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
