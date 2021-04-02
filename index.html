@@ -404,7 +404,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-30 20:26:11" itemprop="dateModified" datetime="2021-03-30T20:26:11+08:00">2021-03-30</time>
+                <time title="Modified: 2021-04-02 11:55:41" itemprop="dateModified" datetime="2021-04-02T11:55:41+08:00">2021-04-02</time>
               </span>
 
           
@@ -418,7 +418,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="功能模块"><a href="#功能模块" class="headerlink" title="功能模块"></a>功能模块</h1><h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><h3 id="基本组件"><a href="#基本组件" class="headerlink" title="基本组件"></a>基本组件</h3><ol>
+          <h1 id="功能模块"><a href="#功能模块" class="headerlink" title="功能模块"></a>功能模块</h1><h2 id="教室"><a href="#教室" class="headerlink" title="教室"></a>教室</h2><h3 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h3><ol>
 <li>页 <strong>page</strong></li>
 </ol>
 <ul>
@@ -432,10 +432,10 @@
 </ul>
 </li>
 <li>标签（隐藏属性，用于分类、推荐等数据处理）</li>
-<li>块 <strong>block</strong></li>
+<li>块 <strong>cell</strong></li>
 </ul>
 <ol start="2">
-<li>块<strong>block</strong></li>
+<li>块<strong>cell</strong></li>
 </ol>
 <ul>
 <li>作者长按轮盘:<ul>
@@ -456,19 +456,42 @@
 <li>点击标注可跳转进度</li>
 </ul>
 </li>
-<li>提问</li>
+<li>提问和评论</li>
 </ul>
 </li>
 <li>文字输入(markdown)</li>
 </ul>
 <ol start="3">
-<li>草稿页（作者视角）<ul>
+<li>草稿区（）<ul>
 <li>基本功能同常规页，</li>
-<li>可折叠悬浮于侧面,可拖拽block至常规页</li>
+<li>可折叠悬浮于侧面,可拖拽cell至常规页</li>
 <li>可用于随手记，随手录音,随手拍</li>
+<li>用于临时收藏某cell，可以是自己的也可以是他人作品，用于<strong>引用</strong>Cell</li>
 </ul>
 </li>
 </ol>
+<h3 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h3><p>核心组件：board<br>核心实现方案：分屏，上半部为父board，下半部为线性排列的子board，借鉴现实教室双层黑板设计</p>
+<h4 id="可填充的内容"><a href="#可填充的内容" class="headerlink" title="可填充的内容:"></a>可填充的内容:</h4><ol>
+<li>板书</li>
+</ol>
+<p>板书，顾名思义，黑板，亦可理解为背景图层。</p>
+<ul>
+<li>背景：默认纯白</li>
+<li>文字。普通的Markdown文本。例如简单一句话介绍可直接作为展开后的标题；可添加OCR公式</li>
+<li>图片。如拍摄手稿、书页片段等</li>
+</ul>
+<p>注：文字与图片互斥，同一board只可选一种</p>
+<ol start="2">
+<li>讲解<ul>
+<li>注解：任何辅助讲解的标记，包括形状、手写等；</li>
+<li>语音：与注解同步，点击注解可跳转.<h4 id="界面"><a href="#界面" class="headerlink" title="界面"></a>界面</h4></li>
+<li>上半屏为父board，可上下拉控制高度（间接实现隐藏功能）可滚动浏览，</li>
+<li>下半屏为子board序列<h4 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h4></li>
+</ul>
+</li>
+</ol>
+<h4 id="播放"><a href="#播放" class="headerlink" title="播放"></a>播放</h4><p>竖屏|横屏</p>
+<p>长按board轮盘</p>
 <h3 id="功能与交互"><a href="#功能与交互" class="headerlink" title="功能与交互"></a>功能与交互</h3><h3 id="内容权限"><a href="#内容权限" class="headerlink" title="内容权限"></a>内容权限</h3><h2 id="知识图谱-体系构建"><a href="#知识图谱-体系构建" class="headerlink" title="知识图谱/体系构建"></a>知识图谱/体系构建</h2><h2 id="网络共享"><a href="#网络共享" class="headerlink" title="网络共享"></a>网络共享</h2><h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h1 id="通信"><a href="#通信" class="headerlink" title="通信"></a>通信</h1>
       
     </div>
