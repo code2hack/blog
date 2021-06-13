@@ -141,6 +141,73 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh">
+    <link itemprop="mainEntityOfPage" href="https://code2hack.github.io/blog/2021/06/13/%E9%A1%B9%E7%9B%AE%E5%88%97%E8%A1%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Code2Hack">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2021/06/13/%E9%A1%B9%E7%9B%AE%E5%88%97%E8%A1%A8/" class="post-title-link" itemprop="url">项目列表</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-06-13 17:48:32 / Modified: 17:52:30" itemprop="dateCreated datePublished" datetime="2021-06-13T17:48:32+08:00">2021-06-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h1><p><a href="../../public/2021/03/25/计划书/index.html">计划书</a></p>
+<h1 id="AR-amp-音乐"><a href="#AR-amp-音乐" class="headerlink" title="AR &amp; 音乐"></a>AR &amp; 音乐</h1><ol>
+<li>Kalimba</li>
+<li>钢琴</li>
+<li>小提琴</li>
+<li>高脚杯</li>
+<li>一弦多音<h2 id="手机APP搭载AR乐器"><a href="#手机APP搭载AR乐器" class="headerlink" title="手机APP搭载AR乐器"></a>手机APP搭载AR乐器</h2></li>
+</ol>
+<h2 id="智能镜"><a href="#智能镜" class="headerlink" title="智能镜"></a>智能镜</h2><p><a href="https://github.com/MichMich/MagicMirror.git" target="_blank" rel="noopener">Magic Mirror</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh">
     <link itemprop="mainEntityOfPage" href="https://code2hack.github.io/blog/2021/03/31/%E6%99%BA%E8%83%BD%E5%95%86%E4%B8%9Aby%E6%9B%BE%E9%B8%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -404,7 +471,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-04 20:45:48" itemprop="dateModified" datetime="2021-04-04T20:45:48+08:00">2021-04-04</time>
+                <time title="Modified: 2021-06-09 17:45:32" itemprop="dateModified" datetime="2021-06-09T17:45:32+08:00">2021-06-09</time>
               </span>
 
           
@@ -492,7 +559,55 @@
 </ol>
 <h4 id="播放"><a href="#播放" class="headerlink" title="播放"></a>播放</h4><p>竖屏|横屏</p>
 <p>长按board轮盘</p>
-<h3 id="功能与交互"><a href="#功能与交互" class="headerlink" title="功能与交互"></a>功能与交互</h3><h3 id="内容权限"><a href="#内容权限" class="headerlink" title="内容权限"></a>内容权限</h3><h2 id="知识图谱-体系构建"><a href="#知识图谱-体系构建" class="headerlink" title="知识图谱/体系构建"></a>知识图谱/体系构建</h2><h2 id="网络共享"><a href="#网络共享" class="headerlink" title="网络共享"></a>网络共享</h2><h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h1 id="通信"><a href="#通信" class="headerlink" title="通信"></a>通信</h1>
+<h3 id="方案三"><a href="#方案三" class="headerlink" title="方案三"></a>方案三</h3><ol>
+<li><p>主要组件</p>
+<ul>
+<li>Cell:<ul>
+<li>录制音频</li>
+<li>与副屏材料同步</li>
+<li>引用</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>页面</p>
+<ul>
+<li>主屏: 包含当前目录的所有Cell</li>
+<li>副屏: Cell目录挂载的原始材料，可以左右滑动切换或多设备同步显示。<ul>
+<li>PDF文档<ul>
+<li>书籍、论文等版权资源</li>
+<li>PPT、Word文档等原创文档</li>
+</ul>
+</li>
+<li>手稿: 主要配合平板手写功能使用</li>
+<li>开源代码</li>
+</ul>
+</li>
+<li>QA屏:</li>
+</ul>
+</li>
+<li><p>同步</p>
+<ul>
+<li>副屏PDF材料定位至页、注释 </li>
+<li>开源代码文件、行、高亮</li>
+<li>手稿</li>
+</ul>
+</li>
+<li><p>特殊同步</p>
+<p>针对版权资料的特殊性，默认作者与读者均拥有同一纸质版权资料。</p>
+<ul>
+<li>通过ISBN搜索、匹配作者的Cell</li>
+<li>ISBN &amp;&amp; （页码 || OCR识别) 搜索作者的Cell</li>
+<li>在定位至纸质页后，同步语音和<strong>AR 注释、手稿</strong></li>
+</ul>
+</li>
+</ol>
+<h3 id="功能与交互"><a href="#功能与交互" class="headerlink" title="功能与交互"></a>功能与交互</h3><h3 id="内容权限"><a href="#内容权限" class="headerlink" title="内容权限"></a>内容权限</h3><ol>
+<li>自己可见</li>
+<li>订阅者可见</li>
+<li>公开</li>
+</ol>
+<h2 id="知识图谱-体系构建"><a href="#知识图谱-体系构建" class="headerlink" title="知识图谱/体系构建"></a>知识图谱/体系构建</h2><h2 id="网络共享"><a href="#网络共享" class="headerlink" title="网络共享"></a>网络共享</h2><h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h1 id="通信"><a href="#通信" class="headerlink" title="通信"></a>通信</h1>
       
     </div>
 
@@ -542,7 +657,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-29 10:09:45" itemprop="dateModified" datetime="2021-04-29T10:09:45+08:00">2021-04-29</time>
+                <time title="Modified: 2021-06-09 17:01:48" itemprop="dateModified" datetime="2021-06-09T17:01:48+08:00">2021-06-09</time>
               </span>
 
           
@@ -579,7 +694,7 @@
 <ol start="3">
 <li>画像：根据知识体系分析用户感兴趣的内容</li>
 </ol>
-<h1 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h1><h1 id="可行性报告"><a href="#可行性报告" class="headerlink" title="可行性报告"></a>可行性报告</h1><h1 id="设计方案"><a href="#设计方案" class="headerlink" title="设计方案"></a>设计方案</h1><h2 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h2><h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><h1 id="测试方案"><a href="#测试方案" class="headerlink" title="测试方案"></a>测试方案</h1><h1 id="项目计划"><a href="#项目计划" class="headerlink" title="项目计划"></a>项目计划</h1><h1 id="成本评估"><a href="#成本评估" class="headerlink" title="成本评估"></a>成本评估</h1><h1 id="风险控制"><a href="#风险控制" class="headerlink" title="风险控制"></a>风险控制</h1>
+<h1 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h1><h1 id="可行性报告"><a href="#可行性报告" class="headerlink" title="可行性报告"></a>可行性报告</h1><h1 id="设计方案"><a href="#设计方案" class="headerlink" title="设计方案"></a>设计方案</h1><h2 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h2><h3 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h3><h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><h1 id="测试方案"><a href="#测试方案" class="headerlink" title="测试方案"></a>测试方案</h1><h1 id="项目计划"><a href="#项目计划" class="headerlink" title="项目计划"></a>项目计划</h1><h1 id="成本评估"><a href="#成本评估" class="headerlink" title="成本评估"></a>成本评估</h1><h1 id="风险控制"><a href="#风险控制" class="headerlink" title="风险控制"></a>风险控制</h1>
       
     </div>
 
@@ -736,7 +851,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

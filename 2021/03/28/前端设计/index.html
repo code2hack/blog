@@ -28,7 +28,7 @@
 <meta property="og:description" content="功能模块教室方案一 页 page   标题 title长按标题录制语音简介（限时30s?）  读者长按轮盘: ** 收藏 follow     标签（隐藏属性，用于分类、推荐等数据处理） 块 cell   块cell   作者长按轮盘: 语音讲解: 插入标注动画（与讲解同步） 同步录制缩放、拖动操作（主要针对PDF WORD 等较大页面在手机上的显示问题）   创建新页 拍摄、引用相册 插入PDF">
 <meta property="og:locale" content="zh">
 <meta property="article:published_time" content="2021-03-28T01:35:22.000Z">
-<meta property="article:modified_time" content="2021-04-04T12:45:48.315Z">
+<meta property="article:modified_time" content="2021-06-09T09:45:32.708Z">
 <meta property="article:author" content="Code2Hack">
 <meta name="twitter:card" content="summary">
 
@@ -175,7 +175,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-04 20:45:48" itemprop="dateModified" datetime="2021-04-04T20:45:48+08:00">2021-04-04</time>
+                <time title="Modified: 2021-06-09 17:45:32" itemprop="dateModified" datetime="2021-06-09T17:45:32+08:00">2021-06-09</time>
               </span>
 
           
@@ -263,7 +263,55 @@
 </ol>
 <h4 id="播放"><a href="#播放" class="headerlink" title="播放"></a>播放</h4><p>竖屏|横屏</p>
 <p>长按board轮盘</p>
-<h3 id="功能与交互"><a href="#功能与交互" class="headerlink" title="功能与交互"></a>功能与交互</h3><h3 id="内容权限"><a href="#内容权限" class="headerlink" title="内容权限"></a>内容权限</h3><h2 id="知识图谱-体系构建"><a href="#知识图谱-体系构建" class="headerlink" title="知识图谱/体系构建"></a>知识图谱/体系构建</h2><h2 id="网络共享"><a href="#网络共享" class="headerlink" title="网络共享"></a>网络共享</h2><h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h1 id="通信"><a href="#通信" class="headerlink" title="通信"></a>通信</h1>
+<h3 id="方案三"><a href="#方案三" class="headerlink" title="方案三"></a>方案三</h3><ol>
+<li><p>主要组件</p>
+<ul>
+<li>Cell:<ul>
+<li>录制音频</li>
+<li>与副屏材料同步</li>
+<li>引用</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>页面</p>
+<ul>
+<li>主屏: 包含当前目录的所有Cell</li>
+<li>副屏: Cell目录挂载的原始材料，可以左右滑动切换或多设备同步显示。<ul>
+<li>PDF文档<ul>
+<li>书籍、论文等版权资源</li>
+<li>PPT、Word文档等原创文档</li>
+</ul>
+</li>
+<li>手稿: 主要配合平板手写功能使用</li>
+<li>开源代码</li>
+</ul>
+</li>
+<li>QA屏:</li>
+</ul>
+</li>
+<li><p>同步</p>
+<ul>
+<li>副屏PDF材料定位至页、注释 </li>
+<li>开源代码文件、行、高亮</li>
+<li>手稿</li>
+</ul>
+</li>
+<li><p>特殊同步</p>
+<p>针对版权资料的特殊性，默认作者与读者均拥有同一纸质版权资料。</p>
+<ul>
+<li>通过ISBN搜索、匹配作者的Cell</li>
+<li>ISBN &amp;&amp; （页码 || OCR识别) 搜索作者的Cell</li>
+<li>在定位至纸质页后，同步语音和<strong>AR 注释、手稿</strong></li>
+</ul>
+</li>
+</ol>
+<h3 id="功能与交互"><a href="#功能与交互" class="headerlink" title="功能与交互"></a>功能与交互</h3><h3 id="内容权限"><a href="#内容权限" class="headerlink" title="内容权限"></a>内容权限</h3><ol>
+<li>自己可见</li>
+<li>订阅者可见</li>
+<li>公开</li>
+</ol>
+<h2 id="知识图谱-体系构建"><a href="#知识图谱-体系构建" class="headerlink" title="知识图谱/体系构建"></a>知识图谱/体系构建</h2><h2 id="网络共享"><a href="#网络共享" class="headerlink" title="网络共享"></a>网络共享</h2><h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h1 id="通信"><a href="#通信" class="headerlink" title="通信"></a>通信</h1>
     </div>
 
     
@@ -344,7 +392,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#功能模块"><span class="nav-number">1.</span> <span class="nav-text">功能模块</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#教室"><span class="nav-number">1.1.</span> <span class="nav-text">教室</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方案一"><span class="nav-number">1.1.1.</span> <span class="nav-text">方案一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方案二"><span class="nav-number">1.1.2.</span> <span class="nav-text">方案二</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#可填充的内容"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">可填充的内容:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#界面"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">界面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编辑"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">编辑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#播放"><span class="nav-number">1.1.2.4.</span> <span class="nav-text">播放</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#功能与交互"><span class="nav-number">1.1.3.</span> <span class="nav-text">功能与交互</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内容权限"><span class="nav-number">1.1.4.</span> <span class="nav-text">内容权限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识图谱-体系构建"><span class="nav-number">1.2.</span> <span class="nav-text">知识图谱&#x2F;体系构建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络共享"><span class="nav-number">1.3.</span> <span class="nav-text">网络共享</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据结构"><span class="nav-number">2.</span> <span class="nav-text">数据结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#通信"><span class="nav-number">3.</span> <span class="nav-text">通信</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#功能模块"><span class="nav-number">1.</span> <span class="nav-text">功能模块</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#教室"><span class="nav-number">1.1.</span> <span class="nav-text">教室</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方案一"><span class="nav-number">1.1.1.</span> <span class="nav-text">方案一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方案二"><span class="nav-number">1.1.2.</span> <span class="nav-text">方案二</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#可填充的内容"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">可填充的内容:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#界面"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">界面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编辑"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">编辑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#播放"><span class="nav-number">1.1.2.4.</span> <span class="nav-text">播放</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方案三"><span class="nav-number">1.1.3.</span> <span class="nav-text">方案三</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#功能与交互"><span class="nav-number">1.1.4.</span> <span class="nav-text">功能与交互</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内容权限"><span class="nav-number">1.1.5.</span> <span class="nav-text">内容权限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识图谱-体系构建"><span class="nav-number">1.2.</span> <span class="nav-text">知识图谱&#x2F;体系构建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络共享"><span class="nav-number">1.3.</span> <span class="nav-text">网络共享</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据结构"><span class="nav-number">2.</span> <span class="nav-text">数据结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#通信"><span class="nav-number">3.</span> <span class="nav-text">通信</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -358,7 +406,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
